@@ -1,4 +1,5 @@
-# GRAVE-D Data 2026
+# RIVALS — Revisionism, Institutions, Vulnerability, Alliances, Leadership, Signals 
+# Formerly GRAVE-D Data 2026
 
 **GRAVE-D Protocol: Master Dyadic Dataset Builder**
 
