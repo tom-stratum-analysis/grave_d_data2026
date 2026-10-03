@@ -6,19 +6,12 @@ unit_of_analysis: "The behavior of Sender (A) toward Target (B) in a given year.
 last_updated: "March 1, 2026"
 total_variables: 386
 author: 
-  - name: Tom Hanna
+  - name: T.H.
     id: th
     orcid: 0000-0002-8054-0335
-    email: tlhanna@central.uh.edu
-    url: tomhanna.me
-    affiliation: 
-      - name: University of Houston
-        city: Houston
-        state: TX
-        url: uh.edu/class/political-science/
 license: CC BY-NC-SA 4.0
 copyright: 
-  holder: Tom Hanna
+  holder: T.H.
   year: 2026
 format:
   docx:
@@ -597,7 +590,7 @@ The GRAVE-D dataset integrates variables from the source datasets listed below. 
 | 16 | Ross Oil and Gas Dataset | Ross, Michael L. *Oil and Gas Data, 1932--2014*. Harvard Dataverse. doi:10.7910/DVN/ZTPW0Y. | Integrated |
 | 17 | Standardized World Income Inequality Database (SWIID) | Solt, Frederick. 2020. "Measuring Income Inequality Across Countries and Over Time." *Social Science Quarterly* 101(3): 1183--1199. | Integrated |
 | 18 | RED --- Relational Export Dataset | Dur, Andreas, Leonardo Baccini, et al. *RED Dataset*. University of Bremen. | Integrated |
-| 19 | ALBA Membership | Hanna, Tom. 2026. Original coding. | Integrated |
+| 19 | ALBA Membership | T.H.. 2026. Original coding. | Integrated |
 | 20 | countrycode (R package) | Arel-Bundock, Vincent. *countrycode*. CRAN. | Integrated |
 | 21 | Correlates of War --- Direct Contiguity | Correlates of War Project. *Direct Contiguity Data Set*. | **(PENDING)** |
 | 22 | Uppsala Conflict Data Program (UCDP) | UCDP. Department of Peace and Conflict Research, Uppsala University. | **(PENDING)** |
@@ -609,7 +602,7 @@ The GRAVE-D dataset integrates variables from the source datasets listed below. 
 
 1. **Directed dyad structure.** All monadic variables (V-Dem, CINC, WRP, Archigos, leader data) are merged twice: once for Side A (Sender, `_a` suffix) and once for Side B (Target, `_b` suffix).
 
-2. **V-Dem version handling.** The pipeline uses `any_of()` in the V-Dem `select()` call to handle variable name changes across vdemdata package versions. Old names (`e_migdppc`, `e_mipopula`) are harmonized to current names (`egdppc`, `epop`) post-select.
+2. **V-Dem version handling.** The pipeline uses `any_of` in the V-Dem `select` call to handle variable name changes across vdemdata package versions. Old names (`e_migdppc`, `e_mipopula`) are harmonized to current names (`egdppc`, `epop`) post-select.
 
 3. **WRP interpolation.** WRP data is released at 5-year intervals. Intervening years use linear interpolation; post-2010 years use Last Observation Carried Forward (LOCF).
 
@@ -653,7 +646,7 @@ The following variable categories are excluded from all imputation stages. Their
 
 ### Stage 1: Country-Year Panel Interpolation
 
-**Method:** Linear interpolation within each country's time series using R's `approx()` function with `rule = 2`.
+**Method:** Linear interpolation within each country's time series using R's `approx` function with `rule = 2`.
 
 **Logic:** For each eligible numeric variable, the script extracts a monadic country-year panel (one row per country per year), groups by country, and interpolates between observed values. At the edges of each country's time series:
 - Years **before** the first observation receive the earliest observed value (carried backward).
