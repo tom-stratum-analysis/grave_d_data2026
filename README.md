@@ -4,9 +4,8 @@
 **GRAVE-D Protocol: Master Dyadic Dataset Builder**
 
 **Project:** From Cooperation to Control: Authoritarian Leadership Politics & International Conflict  
-**Author:** Tom Hanna  
+**Author:** T.H.  
 **ORCID:** 0000-0002-8054-0335  
-**Affiliation:** University of Houston, Department of Political Science  
 **License:** [CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/)  
 **Codebook Version:** GRAVE-D Master Dyadic Codebook v 1.0 (Last Updated: February 13, 2026)
 
@@ -16,7 +15,7 @@
 
 This repository contains the data assembly pipeline for the **GRAVE-D** (Grand Revisionism And Violence Event — Dyadic) dataset. It builds the master dyadic dataset used across multiple research projects, most notably:
 
-- [autocracy_conflict_signaling](https://github.com/tomhanna-uh/autocracy_conflict_signaling) — Rational vs. Messianic Autocrat conflict signaling analysis
+- [autocracy_conflict_signaling](https://github.com/tom-stratum-analysis/autocracy_conflict_signaling) — Rational vs. Messianic Autocrat conflict signaling analysis
 
 The dataset is a **directed dyad-year** panel covering 1946–2020. The unit of analysis is the behavior of Sender (Country A) toward Target (Country B) in a given year.
 
@@ -130,7 +129,7 @@ grave_d_data2026/
 ├── .gitignore
 ├── run_all.R                          # Master pipeline: run scripts in order
 ├── R/
-│   ├── 00_packages.R                 # All library() calls
+│   ├── 00_packages.R                 # All library calls
 │   ├── 01_build_fbic_spine.R         # Build directed dyad-year spine from FBIC
 │   ├── 02_build_conflict.R           # Merge MIDs v4.0 conflict outcomes
 │   ├── 03_build_grave_d_ideology.R   # Merge GRAVE-D ideology & support group vars
@@ -243,15 +242,15 @@ This file should be copied into the `data/` directory of downstream analysis rep
 
 ## Related Repositories
 
-- [autocracy_conflict_signaling](https://github.com/tomhanna-uh/autocracy_conflict_signaling) — Primary analysis repo consuming this dataset
-- [2025_grave_d_conflict](https://github.com/tomhanna-uh/2025_grave_d_conflict) — Prior analysis version
-- [2024_Research_Conflict_Ideology](https://github.com/tomhanna-uh/2024_Research_Conflict_Ideology) — Original conflict ideology models
+- [autocracy_conflict_signaling](https://github.com/tom-stratum-analysis/autocracy_conflict_signaling) — Primary analysis repo consuming this dataset
+- [2025_grave_d_conflict](https://github.com/tom-stratum-analysis/2025_grave_d_conflict) — Prior analysis version
+- [2024_Research_Conflict_Ideology](https://github.com/tom-stratum-analysis/2024_Research_Conflict_Ideology) — Original conflict ideology models
 
 ---
 
 ## Citation
 
-Hanna, Tom. GRAVE-D Data 2026: Master Dyadic Dataset Builder. Working repository, University of Houston, 2026.
+T.H.. GRAVE-D Data 2026: Master Dyadic Dataset Builder. Working repository, the institution, 2026.
 
 Please be sure to cite original data sources listed in source_data.md
 
