@@ -10,13 +10,12 @@
 # It loads spine_ideology.rds, merges NAG counts/binaries, and saves 
 # spine_ideology_nags.rds (so 04 and 05 can pick it up with one tiny change).
 #
-# Tom Hanna
-# University of Houston
+# T.H.
 # Department of Political Science
-# tlhanna@uh.edu
+# 
 #
 # Working manuscript and code repository
-# Copyright © Tom Hanna, 2020–2026
+# Copyright © T.H., 2020–2026
 # Licensed under CC BY-NC-SA 4.0
 # Draft date: March 2026
 # =============================================================================
@@ -118,7 +117,7 @@ spine_nags |>
                          list(class = ~class(.),
                               max   = ~max(., na.rm = TRUE),
                               mean  = ~mean(., na.rm = TRUE)))) |>
-        print()
+        print
 
 # ----------------------------------------------------------------------------
 # 7. Save updated spine (for 04_build_controls.R and downstream)
